@@ -104,7 +104,7 @@ fi
 mkdir -p "$HOME/chromium/config"
 
 # Запуск контейнера с Chromium
-container_name="maycrypto_browser_$USERNAME"
+container_name="dikcismart$USERNAME"
 if [ "$(docker ps -q -f name=$container_name)" ]; then
   show "Контейнер $container_name уже запущен."
 else
@@ -120,7 +120,7 @@ else
     -e PASSWORD="$PASSWORD" \
     -e LANGUAGE=en_US.UTF-8 \
     -v "$HOME/chromium/config:/config" \
-    -p 10100:3007 \
+    -p 10000:3007 \
     --shm-size="2gb" \
     --restart unless-stopped \
     lscr.io/linuxserver/chromium:latest
